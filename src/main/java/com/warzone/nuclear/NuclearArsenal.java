@@ -21,7 +21,8 @@ public class NuclearArsenal implements Serializable {
     @Column(name="last_test_year") private Integer lastTestYear;
     @Column(length=50) private String policy;
     @Column(length=30) private String status;
-    private Double lat; private Double lng;
+    @Column(columnDefinition="numeric(9,6)") private Double lat;
+    @Column(columnDefinition="numeric(9,6)") private Double lng;
     @Column(name="updated_at") private LocalDateTime updatedAt=LocalDateTime.now();
 
     public UUID getId(){return id;} public void setId(UUID v){this.id=v;}
