@@ -11,8 +11,8 @@ public class MilitaryBase implements Serializable {
     @Column(nullable=false,length=200) private String name;
     @Column(name="country_code",nullable=false,length=3) private String countryCode;
     @Column(name="host_country",length=3) private String hostCountry;
-    @Column(nullable=false) private Double lat;
-    @Column(nullable=false) private Double lng;
+    @Column(nullable=false,columnDefinition="numeric(9,6)") private Double lat;
+    @Column(nullable=false,columnDefinition="numeric(9,6)") private Double lng;
     @Column(name="base_type",nullable=false,length=30) private String baseType;
     private Integer personnel=0;
     @Column(name="is_overseas") private Boolean isOverseas=false;
