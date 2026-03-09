@@ -17,8 +17,8 @@ public class Conflict implements Serializable {
     @Column(columnDefinition = "TEXT") private String description;
     @Column(name = "country_a", nullable = false, length = 100) private String countryA;
     @Column(name = "country_b", length = 100) private String countryB;
-    @Column(nullable = false) private Double lat;
-    @Column(nullable = false) private Double lng;
+    @Column(nullable = false, columnDefinition = "numeric(9,6)") private Double lat;
+    @Column(nullable = false, columnDefinition = "numeric(9,6)") private Double lng;
     @Column(length = 20) private String severity = "LOW";
     @Column(length = 30) private String status = "TENSION";
     @Column(name = "conflict_type", length = 50) private String conflictType;
