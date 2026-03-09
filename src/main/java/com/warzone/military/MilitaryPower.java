@@ -36,7 +36,8 @@ public class MilitaryPower implements Serializable {
     private Integer ports=0;
     @Column(name="nuclear_capable") private Boolean nuclearCapable=false;
     @Column(length=200) private String alliances;
-    private Double lat; private Double lng;
+    @Column(columnDefinition="numeric(9,6)") private Double lat;
+    @Column(columnDefinition="numeric(9,6)") private Double lng;
     @Column(name="updated_at") private LocalDateTime updatedAt=LocalDateTime.now();
 
     public UUID getId(){return id;} public void setId(UUID v){this.id=v;}
